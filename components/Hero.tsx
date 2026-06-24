@@ -30,7 +30,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl lg:text-6xl"
+            className="text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl lg:text-6xl 2xl:text-7xl"
           >
             {siteConfig.name}
           </motion.h1>
@@ -39,7 +39,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
-            className="mt-4 text-xl font-medium text-zinc-100 sm:text-2xl"
+            className="mt-4 text-xl font-medium text-zinc-100 sm:text-2xl 2xl:text-3xl"
           >
             {siteConfig.title}
           </motion.p>
@@ -48,7 +48,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-6 text-base leading-relaxed text-zinc-100 sm:text-lg"
+            className="mt-6 text-base leading-relaxed text-zinc-100 sm:text-lg 2xl:text-xl 2xl:leading-loose"
           >
             {siteConfig.tagline}
           </motion.p>
@@ -94,7 +94,7 @@ export default function Hero() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="relative h-64 w-64 overflow-hidden rounded-2xl bg-slate-800 shadow-2xl ring-1 ring-zinc-700/50 sm:h-72 sm:w-72 lg:h-80 lg:w-80"
+            className="relative h-64 w-64 overflow-hidden rounded-2xl bg-slate-800 shadow-2xl ring-1 ring-zinc-700/50 sm:h-72 sm:w-72 lg:h-80 lg:w-80 2xl:h-96 2xl:w-96"
           >
             <Image
               src={siteConfig.profileImage}

@@ -36,7 +36,7 @@ export default function Contact() {
       className="border-t border-zinc-800/60 px-6 py-24"
       delay={0.1}
     >
-      <div className="mx-auto max-w-6xl text-center">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[85vw] text-center">
         <p className="text-sm font-medium uppercase tracking-widest text-emerald-400">
           Contacto
         </p>

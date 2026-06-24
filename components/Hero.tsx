@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="absolute -right-32 bottom-1/4 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-12 lg:flex-row lg:gap-16">
+      <div className="relative mx-auto flex w-full max-w-7xl 2xl:max-w-[85vw] flex-col items-center gap-12 lg:flex-row lg:gap-16">
         <div className="flex-1 text-center lg:text-left">
           <motion.p
             initial={{ opacity: 0, y: 20 }}

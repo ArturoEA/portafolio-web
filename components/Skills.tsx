@@ -12,7 +12,7 @@ export default function Skills() {
       className="border-t border-zinc-800/60 px-6 py-24"
       delay={0.1}
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[85vw]">
         <SectionHeading
           label="Stack tecnológico"
           title="Herramientas y tecnologías"

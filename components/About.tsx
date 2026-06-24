@@ -13,7 +13,7 @@ export default function About() {
           label="Sobre mí"
           title="Ingeniería con visión de negocio"
         />
-        <p className="max-w-4xl text-base leading-relaxed text-zinc-400 sm:text-lg">
+        <p className="max-w-4xl text-base leading-relaxed text-zinc-100 sm:text-lg">
           {aboutContent.description}
         </p>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

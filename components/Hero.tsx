@@ -23,7 +23,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mb-4 text-sm font-medium uppercase tracking-widest text-emerald-400"
           >
-            Portafolio Profesional
+            Hola, mi nombre es
           </motion.p>
 
           <motion.h1
@@ -39,7 +39,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
-            className="mt-4 text-xl font-medium text-zinc-300 sm:text-2xl"
+            className="mt-4 text-xl font-medium text-zinc-100 sm:text-2xl"
           >
             {siteConfig.title}
           </motion.p>
@@ -48,7 +48,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-6 text-base leading-relaxed text-zinc-400 sm:text-lg"
+            className="mt-6 text-base leading-relaxed text-zinc-100 sm:text-lg"
           >
             {siteConfig.tagline}
           </motion.p>
@@ -74,7 +74,7 @@ export default function Hero() {
             <a
               href={siteConfig.cvUrl}
               download="Arturo_Esquivel_CV.pdf"
-              className="inline-flex items-center justify-center rounded-full border border-emerald-500/40 px-8 py-3 text-sm font-semibold text-emerald-400 transition-colors hover:border-emerald-400 hover:bg-emerald-500/10"
+              className="inline-flex items-center justify-center rounded-full border border-emerald-500/40 px-8 py-3 text-sm font-semibold text-zinc-100 transition-colors hover:border-emerald-400 hover:bg-emerald-500/10"
             >
               Descargar CV
             </a>

@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={cn("scroll-smooth", inter.variable, "font-sans", geist.variable)}>
+    <html lang="es" className={cn("scroll-smooth dark", inter.variable, "font-sans", geist.variable)}>
       <body className="relative min-h-screen font-sans text-zinc-100 antialiased">
         {children}
       </body>

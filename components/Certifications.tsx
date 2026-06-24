@@ -15,23 +15,25 @@ export default function Certifications() {
           title="Certificaciones y cursos"
           description="Actualización constante en tecnologías web, redes, seguridad e inteligencia artificial."
         />
-        <ul className="space-y-3">
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {certifications.map((cert) => (
             <li
               key={cert.title}
-              className="flex flex-col gap-1 rounded-xl border border-zinc-800 bg-zinc-900/40 px-5 py-4 transition-colors hover:border-emerald-500/20 hover:bg-zinc-900/70 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+              className="flex flex-col justify-between gap-3 rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 transition-colors hover:border-emerald-500/20 hover:bg-zinc-900/70"
             >
-              <span className="text-sm font-medium text-zinc-200">
+              <span className="text-base font-semibold text-zinc-200">
                 {cert.title}
               </span>
-              <span className="shrink-0 text-sm text-zinc-500">
-                {cert.issuer}
+              <div className="flex flex-col gap-2">
+                <span className="text-sm text-zinc-400">
+                  {cert.issuer}
+                </span>
                 {cert.status && (
-                  <span className="ml-2 rounded-full bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-400">
+                  <span className="w-fit rounded-full bg-emerald-500/10 px-2.5 py-1 text-xs font-medium text-emerald-400">
                     {cert.status}
                   </span>
                 )}
-              </span>
+              </div>
             </li>
           ))}
         </ul>

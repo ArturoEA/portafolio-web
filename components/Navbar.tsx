@@ -30,7 +30,7 @@ export default function Navbar() {
           href="#inicio"
           className="text-sm font-semibold tracking-tight text-zinc-100 transition-colors hover:text-emerald-400"
         >
-          A.S.E.A.
+          Arturo Esquivel Alvarado
         </a>
         <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (

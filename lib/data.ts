@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Arturo Salvador Esquivel Alvarado",
+  name: "Arturo Esquivel",
   title: "Desarrollador Full Stack & Ingeniero de Sistemas",
   tagline:
     "Bachiller en Ingeniería de Sistemas con más de un año de experiencia construyendo soluciones web y aplicaciones nativas. Transformo requerimientos complejos en software empresarial eficiente. Actualmente en preparación para la certificación AWS Solutions Architect.",
@@ -15,7 +15,7 @@ export const siteConfig = {
 
 export const aboutContent = {
   description:
-    "Soy un desarrollador orientado a resolver problemas empresariales reales, combinando un sólido perfil técnico con visión de negocio. Durante más de un año, he construido soluciones para industrias exigentes, logrando mejoras medibles en eficiencia operativa y reducción de costos en la nube. Me destaco por mi capacidad autodidacta, mi nivel de inglés B2 que me permite colaborar en entornos internacionales, y un fuerte enfoque en la calidad del producto. Mi objetivo es crear plataformas SaaS escalables que aporten valor directo a la operación del cliente.",
+    "Soy un desarrollador orientado a resolver problemas empresariales reales, combinando un sólido perfil técnico con visión de negocio. Durante más de un año, he construido soluciones para industrias exigentes, logrando mejoras medibles en eficiencia operativa y reducción de costos en la nube. Me destaco por mi capacidad autodidacta, mi nivel de inglés B2 que me permite colaborar en entornos internacionales, y un fuerte enfoque en la calidad del producto. Mi objetivo es crear software escalable que aporte valor directo a la operación del cliente.",
   softSkills: [
     "Liderazgo en toma de requisitos",
     "Resolución de incidencias críticas",
@@ -25,28 +25,35 @@ export const aboutContent = {
 };
 
 export const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
   "React",
   "Next.js",
-  "TypeScript",
-  "Tailwind CSS",
-  "Figma (UX/UI)",
   "Node.js",
-  "NestJS",
-  "PHP (Laravel)",
+  "Python",
+  "Django",
+  "PHP",
+  "Laravel",
   "Java",
-  "AWS Solutions Architect (En curso)",
-  "Firebase",
-  "PostgreSQL",
+  "ASP.NET",
+  "Tailwind CSS",
+  "Bootstrap",
   "MySQL",
+  "PostgreSQL",
+  "Firebase",
   "Docker",
   "Git / GitHub",
+  "Figma",
+  "AWS Solutions Architect (En curso)",
 ];
 
 export const projects = [
   {
     id: "maquirent",
     title: "MAQUIRENT",
-    category: "SaaS / Gestión Operativa",
+    category: "Gestión Operativa",
     image: "/Collage_MAQUIRENTAPP.jpeg",
     imageAlt: "Captura de la aplicación MAQUIRENT",
     description:
@@ -68,17 +75,22 @@ export const projects = [
     image: "/Collage_ElCombe.jpeg",
     imageAlt: "Portal web Club El Combe",
     description:
-      "Desarrollo end-to-end de portal de gestión usando PHP (Laravel), MySQL y Tailwind. Implementación de módulos dinámicos y automatización de despliegue en servidor Linux.",
+      "Desarrollo full stack de portal de gestión usando PHP (Laravel), MySQL y Tailwind. Implementación de módulos dinámicos y automatización de despliegue en servidor Linux.",
   },
 ];
 
 export const certifications = [
-  { title: "React Foundations for Next.js", issuer: "Vercel" },
+  {
+    title: "AWS Certified Solutions Architect – Associate",
+    issuer: "Adrian Cantrill / Amazon Web Services",
+    status: "En preparación",
+  },
   {
     title: "CS50's Web Programming with Python and JavaScript",
-    issuer: "Harvard University",
+    issuer: "EDX - Harvard University",
     status: "En curso",
   },
+  { title: "React Foundations for Next.js", issuer: "Vercel" },
   { title: "Linux Essentials", issuer: "Cisco Networking Academy" },
   {
     title: "CCNAv7: Switching, Routing, and Wireless Essentials",

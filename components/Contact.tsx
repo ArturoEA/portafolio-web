@@ -41,7 +41,7 @@ export default function Contact() {
           Contacto
         </p>
         <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl">
-          ¿Buscando construir software a medida escalable y robusto? Hablemos.
+          ¿Buscando construir software? Hablemos
         </h2>
         <div className="mt-10 flex flex-col items-center gap-3 text-zinc-400 sm:flex-row sm:justify-center sm:gap-6">
           <a

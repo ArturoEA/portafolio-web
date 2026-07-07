@@ -1,0 +1,158 @@
+export const en = {
+  siteConfig: {
+    name: "Arturo Esquivel",
+    title: "Full Stack Developer & Systems Engineer",
+    tagline:
+      "Systems Engineering Bachelor with over a year of experience building web solutions and native applications. I transform complex requirements into efficient enterprise software. Currently preparing for the AWS Solutions Architect certification.",
+    email: "earturosalvador@gmail.com",
+    phone: "+51 969 775 015",
+    cvUrl: "/ARTURO_ESQUIVEL_ALVARADO_CV.pdf",
+    profileImage: "/fotoPerfil.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/arturo-salvador-esquivel-alvarado",
+      github: "https://github.com/ArturoEA",
+    },
+  },
+  hero: {
+    greeting: "Hi, my name is",
+    contact: "Contact me",
+    projects: "View Projects",
+    downloadCV: "Download CV",
+    profileAlt: "Profile picture of",
+  },
+  about: {
+    label: "About me",
+    title: "Engineering with business vision",
+    description:
+      "I am a developer focused on solving real business problems, combining a solid technical profile with business vision. For over a year, I have built solutions for demanding industries, achieving measurable improvements in operational efficiency and cost reduction in the cloud. I stand out for my self-taught ability, my B2 English level that allows me to collaborate in international environments, and a strong focus on product quality. My goal is to create scalable software that brings direct value to the client's operation.",
+    softSkills: [
+      "Requirements gathering leadership",
+      "Critical incident resolution",
+      "Autonomous work",
+      "Results-oriented",
+    ],
+  },
+  skills: {
+    label: "Skills",
+    title: "Tech Stack",
+    description: "Modern stack to build scalable products, from interface to infrastructure.",
+    items: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Python",
+      "Django",
+      "PHP",
+      "Laravel",
+      "Java",
+      "ASP.NET",
+      "Tailwind CSS",
+      "Bootstrap",
+      "MySQL",
+      "PostgreSQL",
+      "Firebase",
+      "Docker",
+      "Git / GitHub",
+      "Figma",
+      "AWS Solutions Architect (In progress)",
+    ],
+  },
+  projects: {
+    label: "Projects",
+    title: "Featured Work",
+    description: "Real solutions for companies that need operational efficiency and robust digital products.",
+    items: [
+      {
+        id: "maquirent",
+        title: "MAQUIRENT",
+        category: "Operational Management",
+        image: "/Collage_MAQUIRENTAPP.jpeg",
+        videoUrl: "https://www.youtube.com/embed/aQSMzCVpwxg?autoplay=1&loop=1&playlist=aQSMzCVpwxg&controls=1&mute=1",
+        imageAlt: "Screenshot of the MAQUIRENT application",
+        description:
+          "End-to-end development using MVVM architecture and Offline-First with Firebase. Digitization of the heavy machinery lifecycle, reducing document generation time by 70% and optimizing cloud storage by 75%.",
+      },
+      {
+        id: "credifac",
+        title: "CREDIFAC",
+        category: "Requirements Engineering & UX/UI",
+        image: "/Collage_CREDIFAC.png",
+        imageAlt: "Prototypes and UX/UI design of CREDIFAC",
+        description:
+          "Led requirements gathering with international stakeholders. Documentation of over 240 user stories and design of +100 high-fidelity prototypes for web and mobile platforms.",
+      },
+      {
+        id: "club-el-combe",
+        title: "Club El Combe",
+        category: "Full Stack Web",
+        image: "/Collage_ElCombe.jpeg",
+        imageAlt: "Club El Combe web portal",
+        description:
+          "Full stack development of a management portal using PHP (Laravel), MySQL, and Tailwind. Implementation of dynamic modules and deployment automation on a Linux server.",
+      },
+    ],
+  },
+  certifications: {
+    label: "Continuous Education",
+    title: "Certifications and courses",
+    description: "Constant updating in web technologies, networks, security, and artificial intelligence.",
+    items: [
+      {
+        title: "AWS Certified Solutions Architect – Associate",
+        issuer: "Adrian Cantrill / Amazon Web Services",
+        status: "In preparation",
+      },
+      {
+        title: "CS50's Web Programming with Python and JavaScript",
+        issuer: "EDX - Harvard University",
+        status: "In progress",
+      },
+      { title: "React Foundations for Next.js", issuer: "Vercel" },
+      { title: "Linux Essentials", issuer: "Cisco Networking Academy" },
+      {
+        title: "CCNAv7: Switching, Routing, and Wireless Essentials",
+        issuer: "Cisco Networking Academy",
+      },
+      {
+        title: "CCNAv7: Introduction to Networks",
+        issuer: "Cisco Networking Academy",
+      },
+      {
+        title: "Advanced Programming in C",
+        issuer: "Cisco Networking Academy",
+      },
+      {
+        title: "CLA - Programming Essentials in C",
+        issuer: "Cisco Networking Academy",
+      },
+      {
+        title: "Introduction to Cybersecurity",
+        issuer: "Cisco Networking Academy",
+      },
+      { title: "AI Fundamentals", issuer: "IBM SkillsBuild" },
+    ],
+  },
+  contact: {
+    label: "Contact",
+    title: "Let's work together",
+    description: "I'm available for new projects and job opportunities. If you have an idea in mind or just want to say hi, feel free to reach out.",
+    emailLabel: "Email",
+    phoneLabel: "Phone",
+    locationLabel: "Location",
+    locationValue: "Peru (Remote)",
+    cta: "Send Message",
+    rights: "All rights reserved.",
+  },
+  nav: [
+    { label: "Home", href: "#inicio" },
+    { label: "About me", href: "#sobre-mi" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#proyectos" },
+    { label: "Certifications", href: "#certificaciones" },
+    { label: "Contact", href: "#contacto" },
+  ],
+};

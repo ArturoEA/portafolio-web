@@ -55,6 +55,7 @@ export const projects = [
     title: "MAQUIRENT",
     category: "Gestión Operativa",
     image: "/Collage_MAQUIRENTAPP.jpeg",
+    videoUrl: "https://www.youtube.com/embed/aQSMzCVpwxg?autoplay=1&loop=1&playlist=aQSMzCVpwxg&controls=1&mute=1",
     imageAlt: "Captura de la aplicación MAQUIRENT",
     description:
       "Desarrollo integral bajo arquitectura MVVM y Offline-First con Firebase. Digitalización del ciclo de vida de maquinaria pesada, reduciendo el tiempo de generación de documentos en un 70% y optimizando el almacenamiento cloud en un 75%.",

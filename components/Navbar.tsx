@@ -1,10 +1,11 @@
 "use client";
 
-import { navLinks } from "@/lib/data";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import LanguageToggle from "./LanguageToggle";
+import type { Dictionary } from "@/lib/dictionaries";
 
-export default function Navbar() {
+export default function Navbar({ lang, dict }: { lang: string; dict: { links: Dictionary["nav"], contact: string } }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -33,7 +34,7 @@ export default function Navbar() {
           Arturo Esquivel Alvarado
         </a>
         <ul className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
+          {dict.links.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
@@ -44,12 +45,15 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <a
-          href="#contacto"
-          className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-medium text-zinc-950 transition-colors hover:bg-emerald-400"
-        >
-          Contactar
-        </a>
+        <div className="flex items-center gap-4">
+          <LanguageToggle lang={lang} />
+          <a
+            href="#contacto"
+            className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-medium text-zinc-950 transition-colors hover:bg-emerald-400"
+          >
+            {dict.contact}
+          </a>
+        </div>
       </nav>
     </motion.header>
   );

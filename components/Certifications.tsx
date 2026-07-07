@@ -1,8 +1,8 @@
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
-import { certifications } from "@/lib/data";
+import type { Dictionary } from "@/lib/dictionaries";
 
-export default function Certifications() {
+export default function Certifications({ dict }: { dict: Dictionary["certifications"] }) {
   return (
     <AnimatedSection
       id="certificaciones"
@@ -11,12 +11,12 @@ export default function Certifications() {
     >
       <div className="mx-auto max-w-7xl 2xl:max-w-[85vw]">
         <SectionHeading
-          label="Formación continua"
-          title="Certificaciones y cursos"
-          description="Actualización constante en tecnologías web, redes, seguridad e inteligencia artificial."
+          label={dict.label}
+          title={dict.title}
+          description={dict.description}
         />
         <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {certifications.map((cert) => (
+          {dict.items.map((cert) => (
             <li
               key={cert.title}
               className="flex flex-col justify-between gap-3 rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 transition-colors hover:border-emerald-500/20 hover:bg-zinc-900/70"

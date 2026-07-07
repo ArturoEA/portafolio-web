@@ -1,10 +1,10 @@
 "use client";
 
-import { siteConfig } from "@/lib/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import type { Dictionary } from "@/lib/dictionaries";
 
-export default function Hero() {
+export default function Hero({ dict, siteConfig }: { dict: Dictionary["hero"]; siteConfig: Dictionary["siteConfig"] }) {
   return (
     <section
       id="inicio"
@@ -23,7 +23,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mb-4 text-sm font-medium uppercase tracking-widest text-emerald-400"
           >
-            Hola, mi nombre es
+            {dict.greeting}
           </motion.p>
 
           <motion.h1
@@ -63,20 +63,20 @@ export default function Hero() {
               href="#contacto"
               className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-8 py-3 text-sm font-semibold text-zinc-950 transition-colors hover:bg-emerald-400"
             >
-              Contactar
+              {dict.contact}
             </a>
             <a
               href="#proyectos"
               className="inline-flex items-center justify-center rounded-full border border-zinc-700 px-8 py-3 text-sm font-semibold text-zinc-100 transition-colors hover:border-zinc-500 hover:bg-zinc-900"
             >
-              Ver Proyectos
+              {dict.projects}
             </a>
             <a
               href={siteConfig.cvUrl}
               download="Arturo_Esquivel_CV.pdf"
               className="inline-flex items-center justify-center rounded-full border border-emerald-500/40 px-8 py-3 text-sm font-semibold text-zinc-100 transition-colors hover:border-emerald-400 hover:bg-emerald-500/10"
             >
-              Descargar CV
+              {dict.downloadCV}
             </a>
           </motion.div>
         </div>
@@ -98,7 +98,7 @@ export default function Hero() {
           >
             <Image
               src={siteConfig.profileImage}
-              alt={`Foto de perfil de ${siteConfig.name}`}
+              alt={`${dict.profileAlt} ${siteConfig.name}`}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 256px, 320px"

@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import { getDictionary, Locale } from "@/lib/dictionaries";
 
 const bubbleColors = {
   first: "4,120,87",
@@ -16,7 +17,14 @@ const bubbleColors = {
   sixth: "4,120,87",
 };
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang as Locale);
+
   return (
     <div className="relative min-h-screen">
       <BubbleBackground
@@ -25,14 +33,14 @@ export default function Home() {
         className="fixed inset-0 z-0 size-full bg-transparent"
       />
       <div className="relative z-10">
-        <Navbar />
+        <Navbar lang={lang} dict={{ links: dict.nav, contact: dict.hero.contact }} />
         <main className="bg-transparent">
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Certifications />
-          <Contact />
+          <Hero dict={dict.hero} siteConfig={dict.siteConfig} />
+          <About dict={dict.about} />
+          <Skills dict={dict.skills} />
+          <Projects dict={dict.projects} />
+          <Certifications dict={dict.certifications} />
+          <Contact dict={dict.contact} />
         </main>
       </div>
     </div>

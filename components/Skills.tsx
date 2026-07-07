@@ -2,10 +2,10 @@
 
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
-import { skills } from "@/lib/data";
 import { motion } from "motion/react";
+import type { Dictionary } from "@/lib/dictionaries";
 
-export default function Skills() {
+export default function Skills({ dict }: { dict: Dictionary["skills"] }) {
   return (
     <AnimatedSection
       id="skills"
@@ -14,12 +14,12 @@ export default function Skills() {
     >
       <div className="mx-auto max-w-7xl 2xl:max-w-[85vw]">
         <SectionHeading
-          label="Stack tecnológico"
-          title="Herramientas y tecnologías"
-          description="Stack moderno para construir productos escalables, desde la interfaz hasta la infraestructura."
+          label={dict.label}
+          title={dict.title}
+          description={dict.description}
         />
         <div className="flex flex-wrap gap-3">
-          {skills.map((skill, index) => (
+          {dict.items.map((skill, index) => (
             <motion.div
               key={skill}
               animate={{ y: [-3, 3, -3] }}

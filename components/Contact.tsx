@@ -1,5 +1,6 @@
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { siteConfig } from "@/lib/data";
+import type { Dictionary } from "@/lib/dictionaries";
 
 function LinkedInIcon() {
   return (
@@ -29,7 +30,7 @@ function GitHubIcon() {
   );
 }
 
-export default function Contact() {
+export default function Contact({ dict }: { dict: Dictionary["contact"] }) {
   return (
     <AnimatedSection
       id="contacto"
@@ -38,10 +39,10 @@ export default function Contact() {
     >
       <div className="mx-auto max-w-7xl 2xl:max-w-[85vw] text-center">
         <p className="text-sm font-medium uppercase tracking-widest text-emerald-400">
-          Contacto
+          {dict.label}
         </p>
         <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl">
-          ¿Buscando construir software? Hablemos
+          {dict.title}
         </h2>
         <div className="mt-10 flex flex-col items-center gap-3 text-zinc-400 sm:flex-row sm:justify-center sm:gap-6">
           <a
@@ -79,8 +80,7 @@ export default function Contact() {
           </a>
         </div>
         <p className="mt-16 text-xs text-zinc-600">
-          © {new Date().getFullYear()} {siteConfig.name}. Todos los derechos
-          reservados.
+          © {new Date().getFullYear()} {siteConfig.name}. {dict.rights}
         </p>
       </div>
     </AnimatedSection>

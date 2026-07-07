@@ -62,7 +62,7 @@ export default function Projects({ dict }: { dict: Dictionary["projects"] }) {
                 <h3 className={`mt-3 font-semibold text-zinc-100 ${isMaquirent ? "text-2xl lg:text-3xl" : "text-xl"}`}>
                   {project.title}
                 </h3>
-                <p className={`mt-4 flex-1 leading-relaxed text-white ${isMaquirent ? "text-lg text-zinc-300" : "text-base"}`}>
+                <p className={`mt-4 flex-1 leading-relaxed text-white whitespace-pre-line ${isMaquirent ? "text-sm md:text-base text-zinc-300" : "text-base"}`}>
                   {project.description}
                 </p>
                 <div className="mt-6 h-px w-full bg-gradient-to-r from-emerald-500/40 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />

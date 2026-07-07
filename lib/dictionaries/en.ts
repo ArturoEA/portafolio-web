@@ -74,7 +74,7 @@ export const en = {
         videoUrl: "https://www.youtube.com/embed/aQSMzCVpwxg?autoplay=1&loop=1&playlist=aQSMzCVpwxg&controls=1&mute=1",
         imageAlt: "Screenshot of the MAQUIRENT application",
         description:
-          "End-to-end development using MVVM architecture and Offline-First with Firebase. Digitization of the heavy machinery lifecycle, reducing document generation time by 70% and optimizing cloud storage by 75%.",
+          "Mobile application developed in Java with MVVM architecture, designed to digitize operational administration and heavy machinery (generator sets) rental. Built to solve real logistical challenges in the field using Firebase as optimized cloud infrastructure.\n\n• Offline-First Architecture: Implementation of local persistence with Firestore, ensuring work continuity in areas without internet connection and automatic synchronization upon network recovery.\n\n• Automation and Cloud Savings: 70% reduction in report generation times (native Word/PDF) and development of image compression that decreases storage costs by 75%.\n\n• Control and Security: Equipment lifecycle management system with role-based access control (RBAC), separating administrative and operational permissions.",
       },
       {
         id: "credifac",

@@ -58,7 +58,7 @@ export const projects = [
     videoUrl: "https://www.youtube.com/embed/aQSMzCVpwxg?autoplay=1&loop=1&playlist=aQSMzCVpwxg&controls=1&mute=1",
     imageAlt: "Captura de la aplicación MAQUIRENT",
     description:
-      "Desarrollo integral bajo arquitectura MVVM y Offline-First con Firebase. Digitalización del ciclo de vida de maquinaria pesada, reduciendo el tiempo de generación de documentos en un 70% y optimizando el almacenamiento cloud en un 75%.",
+      "Aplicación móvil desarrollada en Java con arquitectura MVVM, diseñada para digitalizar la administración operativa y el alquiler de maquinaria pesada (grupos electrógenos). Construida para resolver desafíos logísticos reales en campo utilizando Firebase como infraestructura en la nube optimizada.\n\n• Arquitectura Offline-First: Implementación de persistencia local con Firestore, garantizando la continuidad del trabajo en zonas sin conexión a internet y sincronización automática al recuperar la red.\n\n• Automatización y Ahorro Cloud: Reducción del 70% en tiempos de generación de reportes (Word/PDF nativos) y desarrollo de compresión de imágenes que disminuye los costos de almacenamiento en un 75%.\n\n• Control y Seguridad: Sistema de gestión del ciclo de vida de los equipos con control de acceso basado en roles (RBAC), separando permisos administrativos de operativos.",
   },
   {
     id: "credifac",

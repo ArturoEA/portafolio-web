@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Play, Pause, Volume2, VolumeX } from "lucide-react";
+import { Play, Pause } from "lucide-react";
 
 declare global {
   interface Window {
@@ -14,7 +14,6 @@ export default function PremiumMaquirentMedia({ videoUrl }: { videoUrl: string }
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<any>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
 
@@ -144,16 +143,7 @@ export default function PremiumMaquirentMedia({ videoUrl }: { videoUrl: string }
     }
   };
 
-  const toggleMute = () => {
-    if (!playerRef.current) return;
-    if (isMuted) {
-      playerRef.current.unMute();
-      setIsMuted(false);
-    } else {
-      playerRef.current.mute();
-      setIsMuted(true);
-    }
-  };
+
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
     const time = parseFloat(e.target.value);
@@ -172,12 +162,12 @@ export default function PremiumMaquirentMedia({ videoUrl }: { videoUrl: string }
   return (
     <div 
       ref={containerRef}
-      className="relative w-full transition-all duration-700 ease-in-out flex flex-col group h-auto pt-6"
+      className="relative w-full transition-all duration-700 ease-in-out flex flex-col group/phone h-auto pt-6"
       style={{ perspective: "1200px" }}
     >
       {/* 3D Phone Container */}
       <div 
-        className="relative mx-auto w-full max-w-[240px] sm:max-w-[280px] aspect-[14/28] transition-transform duration-700 ease-out [transform:rotateY(-18deg)_rotateX(8deg)] group-hover:[transform:rotateY(-5deg)_rotateX(2deg)]"
+        className="relative mx-auto w-full max-w-[240px] sm:max-w-[280px] aspect-[14/28] transition-transform duration-700 ease-out [transform:rotateY(-18deg)_rotateX(8deg)] group-hover/phone:[transform:rotateY(-5deg)_rotateX(2deg)]"
         style={{ transformStyle: "preserve-3d" }}
       >
         <div 
@@ -210,10 +200,18 @@ export default function PremiumMaquirentMedia({ videoUrl }: { videoUrl: string }
       </div>
 
       {/* Control Bar */}
-      <div className="mt-8 mb-4 w-full mx-auto bg-zinc-900/90 backdrop-blur-xl rounded-2xl border border-zinc-800 p-4 shadow-xl flex flex-col gap-3 transition-all duration-300 z-50 max-w-[280px]">
+      <div className="mt-8 mb-4 w-full mx-auto bg-zinc-900/90 backdrop-blur-xl rounded-2xl border border-zinc-800 p-3 sm:p-4 shadow-xl flex items-center gap-2 sm:gap-3 transition-all duration-300 z-50 max-w-[320px]">
+        {/* Controls */}
+        <button 
+          onClick={togglePlay}
+          className="w-10 h-10 shrink-0 rounded-full bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 hover:text-emerald-300 flex items-center justify-center transition-colors"
+        >
+          {isPlaying ? <Pause size={18} className="fill-current" /> : <Play size={18} className="fill-current ml-1" />}
+        </button>
+
         {/* Progress */}
-        <div className="flex items-center gap-3">
-          <span className="text-xs font-medium text-zinc-400 w-9 text-right tabular-nums">{formatTime(progress)}</span>
+        <div className="flex flex-1 items-center gap-2">
+          <span className="text-xs font-medium text-zinc-400 w-8 sm:w-9 text-right tabular-nums">{formatTime(progress)}</span>
           <div className="relative flex-1 flex items-center h-4 group/slider cursor-pointer">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full h-1 bg-zinc-800 rounded-full overflow-hidden">
@@ -237,26 +235,7 @@ export default function PremiumMaquirentMedia({ videoUrl }: { videoUrl: string }
               style={{ left: `calc(${(progress / (duration || 1)) * 100}% - 6px)` }}
             />
           </div>
-          <span className="text-xs font-medium text-zinc-400 w-9 tabular-nums">{formatTime(duration)}</span>
-        </div>
-
-        {/* Controls */}
-        <div className="flex items-center justify-between px-2 mt-1">
-          <button 
-            onClick={togglePlay}
-            className="w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 hover:text-emerald-300 flex items-center justify-center transition-colors"
-          >
-            {isPlaying ? <Pause size={20} className="fill-current" /> : <Play size={20} className="fill-current ml-1" />}
-          </button>
-
-          <div className="flex items-center gap-4">
-            <button 
-              onClick={toggleMute}
-              className="text-zinc-400 hover:text-white transition-colors flex items-center justify-center w-8 h-8"
-            >
-              {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
-            </button>
-          </div>
+          <span className="text-xs font-medium text-zinc-400 w-8 sm:w-9 tabular-nums">{formatTime(duration)}</span>
         </div>
       </div>
     </div>
